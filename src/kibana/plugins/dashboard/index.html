@@ -1,5 +1,5 @@
 <div dashboard-app class="app-container dashboard-container">
-  <navbar ng-show="!appEmbedded">
+  <navbar>
     <span class="name" ng-if="dash.id" bindonce bo-bind="dash.title" tooltip="{{dash.title}}"></span>
 
     <form name="queryInput"
@@ -29,7 +29,7 @@
 
     </form>
 
-    <div class="button-group" role="toolbar">
+    <div ng-show="!appEmbedded" class="button-group" role="toolbar">
       <kbn-tooltip text="New Dashboard" placement="bottom" append-to-body="1">
         <button ng-click="newDashboard()" aria-label="New Dashboard"><i aria-hidden="true" class="fa fa-file-new-o"></i></button>
       </kbn-tooltip>
